@@ -1,0 +1,979 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: rgb(233, 233, 233);
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+header {
+  position: relative;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.side-nav {
+  position: fixed;
+  left: -280px; 
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  background: #fff;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.side-nav.open {
+  left: 0; 
+}
+
+.navbar {
+  width: 100%;
+  padding: 20px;
+}
+
+.logo {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.logo h1 {
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+ul {
+  margin: 0 auto;
+}
+
+li {
+  padding-bottom: 2rem;
+}
+
+li a {
+  font-size: 16px;
+  color: rgb(91, 15, 15);
+  transition: color 0.3s;
+}
+
+li a:hover {
+  color: rgb(0, 122, 255);
+}
+
+nav i {
+  width: 50px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: rgb(0, 122, 255);
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+#home {
+  background: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  position: relative;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  width: 85%;
+}
+
+#dp {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin-right: 30px; /* Space between image and text */
+  transition: box-shadow 0.3s;
+}
+
+.home-text {
+  text-align: left; /* Align text to the left */
+}
+
+.home-text h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.home-text span {
+  font-size: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start; /* Align icons to the left */
+  margin-top: 20px; /* Space between text and icons */
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 24px;
+  margin: 0 10px; /* Space between icons */
+  transition: color 0.3s;
+}
+.social-icons a img{
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  margin-bottom: 30px;
+}
+.social-icons a:hover {
+  color: rgb(0, 122, 255);
+}
+.social-icons a img:hover {
+  box-shadow: 0 0 0 10px rgb(238, 221, 144);
+}
+.download-resume {
+  margin-top: 20px; /* Space between icons and button */
+  padding: 10px 20px;
+  background-color: #e02f2f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.download-resume i{
+  padding-left: 5px;
+}
+.download-resume:hover {
+  background-color: #555;
+}
+
+#about {
+  background-color: white;
+  color: #333;
+}
+#about h2 {
+  text-align: center;
+}
+#about h2 {
+  margin-bottom: 20px; /* Space below the heading */
+  transition: transform 0.3s ease, color 0.3s ease; /* Transition for smooth effect */
+  color: #333; /* Default color */
+}
+#about h2 i{
+  padding-right: 5px;
+}
+#about h2:hover {
+  cursor: pointer;
+  transform: scale(1.1); /* Scale up the heading */
+  color: #e91e63; /* Change color on hover */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+#about .paraaboutme{
+  padding: 20px;
+}
+.education {
+  margin-top: 40px;
+}
+
+.education-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.icon {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  margin-right: 10px; /* Reduced space between icon and text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.details-left, .details-right {
+  flex: 1; /* Adjusted flex values to prevent long distances */
+}
+
+.details-left {
+  display: flex;
+  align-items: center; /* Aligns text and icon vertically */
+}
+
+.details-left h3 {
+  margin-left: 500px; /* Reduces space between the icon and the text */
+  font-size: 20px;
+  color: #333;
+}
+
+.details-right p {
+  margin: 0;
+  font-size: 20px;
+  color: #666;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+#skills {
+  text-align: center; /* Center the heading */
+  padding: 40px; /* Add padding for spacing */
+}
+
+#skills h2 {
+  margin-bottom: 20px; /* Space below the heading */
+}
+#skills h2 i{
+  padding-right: 5px;
+}
+.skills-container {
+  display: flex; /* Use flexbox */
+  flex-wrap: wrap; /* Allow wrapping if needed */
+  justify-content: center; /* Center items horizontally */
+  gap: 100px; /* Spacing between skills */
+}
+
+.skill {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  display: flex; /* Ensure items can be centered */
+  align-items: center; /* Center contents vertically */
+  justify-content: center; /* Center contents horizontally */
+}
+
+.outer {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+              -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.inner {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner img {
+  width: 70px; /* Adjust size as needed */
+  height: 70px; /* Adjust size as needed */
+}
+
+circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472; /* Start with full circle */
+  transition: stroke-dashoffset 2s ease; /* Smooth transition */
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.skill {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  display: flex; /* Ensure items can be centered */
+  align-items: center; /* Center contents vertically */
+  justify-content: center; /* Center contents horizontally */
+  margin: 20px; /* Adjust this value for individual spacing */
+  transition: transform 0.3s ease; /* Transition for scaling */
+}
+
+.skill:hover {
+  transform: scale(1.1); /* Scale up the skill on hover */
+}
+
+.outer {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+              -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  transition: box-shadow 0.3s ease; /* Transition for shadow */
+}
+
+.skill:hover .outer {
+  box-shadow: 8px 8px 15px -1px rgba(0, 0, 0, 0.25), /* Increase shadow on hover */
+              -8px -8px 15px -1px rgba(255, 255, 255, 0.8);
+}
+
+circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472; /* Start with full circle */
+  transition: stroke 0.3s ease; /* Transition for stroke */
+}
+
+.skill:hover circle {
+  stroke: #ff4081; /* Change stroke color on hover */
+}
+#skills h2 {
+  margin-bottom: 20px; /* Space below the heading */
+  transition: transform 0.3s ease, color 0.3s ease; /* Transition for smooth effect */
+  color: #333; /* Default color */
+}
+
+#skills h2:hover {
+  cursor: pointer;
+  transform: scale(1.1); /* Scale up the heading */
+  color: #e91e63; /* Change color on hover */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+#projects h2{
+  text-align: center;
+}
+#projects h2 {
+  margin-bottom: 20px; /* Space below the heading */
+  transition: transform 0.3s ease, color 0.3s ease; /* Transition for smooth effect */
+  color: #333; /* Default color */
+}
+#projects h2 i{
+  padding-right: 5px;
+}
+#projects h2:hover {
+  cursor: pointer;
+  transform: scale(1.1); /* Scale up the heading */
+  color: #e91e63; /* Change color on hover */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+#projects {
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+}
+
+.blockchain-image {
+  width: 40px; /* Adjust as needed */
+  height: auto;
+  margin-right: 10px; /* Spacing between image and title */
+}
+
+#project-title {
+  margin: 0;
+  animation: reveal 2s steps(30); /* Adjust duration and steps */
+}
+
+@keyframes reveal {
+  from {
+      width: 0;
+      overflow: hidden;
+  }
+  to {
+      width: auto;
+  }
+}
+
+.description-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.description {
+  flex: 1; /* Left side */
+  margin-right: 20px; /* Space between description and media */
+}
+
+.media {
+  display: flex;
+  flex-direction: column; /* Stack video and icon */
+  align-items: flex-end; /* Align to the right */
+}
+
+.media video {
+  width: 400px; /* Adjust size as needed */
+  height: 200px;
+  margin-bottom: 10px; /* Space between video and icon */
+  border-radius: 15px;
+}
+.media p
+{
+  padding-right: 140px;
+  font-size: 20px;
+}
+.github-icon {
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+  padding: 5px;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Add smooth transitions */
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increased shadow for hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.project-card .blockchain-image {
+  transition: transform 0.8s ease-in-out; /* Smooth transition for the image */
+}
+
+.project-card:hover .blockchain-image {
+  transform: rotate(360deg); /* Rotate image on hover */
+}
+
+.project-card h1, 
+.project-card p {
+  transition: color 0.3s ease;
+}
+
+.project-card:hover h1, 
+.project-card:hover p {
+  color: #9fccfa; /* Change text color on hover */
+}
+
+/* Animation for Project Description container */
+.description-container {
+  display: flex;
+  justify-content: space-between; /* Align content left and right */
+  align-items: center;
+}
+
+.description {
+  flex: 1;
+  padding-right: 20px; /* Align the text to the left */
+}
+
+.media {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align media content to the right */
+}
+
+.media video {
+  max-width: 100%; /* Ensure the video fits within the container */
+}
+
+.media .github-icon {
+  width: 40px;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+.media .github-icon:hover {
+  transform: scale(1.2); /* Slightly enlarge the GitHub icon on hover */
+}
+/* General styling for the internship section */
+#internships h2 {
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+#internships h2 i {
+  padding-right: 5px;
+}
+
+/* Heading hover effect */
+#internships h2:hover {
+  cursor: pointer;
+  transform: scale(1.1); /* Scale up the heading */
+  color: #e91e63; /* Change color on hover */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+.internships {
+  margin-top: 5rem;
+}
+
+.internships .quote {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Timeline structure */
+.internships .timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.internships .timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background: #020133;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -2;
+}
+
+/* Individual container for timeline entries */
+.internships .container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Initially off-screen */
+}
+
+/* Circles on the timeline */
+.internships .container::after {
+  content: "\f0b1";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: -20px;
+  background-color: #fff;
+  border: 4px solid #f68c09;
+  top: 30px;
+  border-radius: 50%;
+  z-index: 100;
+  font-size: 1.89rem;
+  text-align: center;
+  font-weight: 600;
+  color: #02094b;
+  font-family: 'Font Awesome 5 Free';
+}
+
+.internships .left {
+  left: 0;
+}
+
+.internships .right {
+  left: 50%;
+}
+
+/* Arrows pointing right */
+.internships .left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #f68c09;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #f68c09;
+}
+
+/* Arrows pointing left */
+.internships .right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #f68c09;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #f68c09 transparent transparent;
+}
+
+/* Adjust circle positioning for right side */
+.internships .right::after {
+  left: -20px;
+}
+
+/* Content of the timeline entries */
+.internships .content {
+  background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+  position: relative;
+  border-radius: 6px;
+}
+
+.internships .content .tag {
+  font-size: 1.3rem;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.internships .content .desc {
+  margin-left: 1.5rem;
+  padding-bottom: 1rem;
+  padding: 20px;
+}
+
+.internships .content .desc h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.internships .content .desc p {
+  font-size: 1.2rem;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 600px) {
+  .internships .timeline::after {
+    left: 31px;
+  }
+  
+  .internships .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  .internships .left::after, .internships .right::after {
+    left: 15px;
+  }
+  
+  .internships .right {
+    left: 0%;
+  }
+  
+  .internships .container::after {
+    font-size: 2.2rem;
+  }
+}
+
+/* Animation when the timeline items come into view */
+.internships .container.active {
+  opacity: 1;
+  transform: translateY(0); /* Slide into position */
+}
+#contactme {
+  background-color: #f2f2f2; /* Background color for the section */
+  padding: 20px;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top */
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.footer-card {
+  display: flex;
+  width: 800px; /* Adjust width as needed */
+  height: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gif-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  padding-left: 10px; /* Space between GIF and form */
+}
+
+.gif-container img {
+  width: 300px; /* Set a max-width for the GIF */
+  height: 300px;
+  padding-top: 40px;
+}
+
+.form-container {
+  flex: 1; 
+  padding: 10px;/* Allow the form to take up the remaining space */
+}
+
+.contact-details {
+  width: 30%; /* Adjust width as needed */
+  padding-left: 20px; /* Space between card and details */
+  padding-top: 50px;
+}
+
+.contact-details h3 {
+  margin-bottom: 10px; /* Space below heading */
+}
+
+#contactme h2 {
+  text-align: center;
+}
+
+#contactme h2:hover {
+  cursor: pointer;
+  transform: scale(1.1); /* Scale up the heading */
+  color: #e91e63; /* Change color on hover */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+#footer form {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+}
+
+#footer label {
+  margin-top: 10px; /* Space between labels and inputs */
+}
+
+#footer input,
+#footer textarea,
+#footer button {
+  margin-bottom: 10px; /* Space between form elements */
+  padding: 10px; /* Inner padding for inputs */
+  border: 1px solid #ccc; /* Border for inputs */
+  border-radius: 4px; /* Rounded corners */
+}
+
+#footer button {
+  background-color: #ff8c7f; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for button background */
+}
+
+#footer button:hover {
+  background-color: #ff556c; /* Darker shade on hover */
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+.contact-details p{
+  font-weight: 500;
+}
+.contact-details p i{
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  #footer {
+      flex-direction: column; /* Stack footer elements vertically */
+  }
+
+  .footer-card {
+      flex-direction: column; /* Stack GIF and form vertically */
+      width: 100%; /* Full width on smaller screens */
+  }
+
+  .contact-details {
+      width: 100%; /* Full width for contact details */
+      text-align: center; /* Center the text */
+      padding-left: 0; /* Remove left padding */
+      font-weight: 100;
+  }
+}
+
+#footer input:focus,
+#footer textarea:focus,
+#footer button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a glow effect */
+}
+
+.gif-container img:hover {
+  transform: scale(1.05); /* Scale up the image on hover */
+  transition: transform 0.3s ease; /* Smooth scaling effect for images */
+}
+
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --header-background: #f8f9fa;
+  --nav-background: #ffffff;
+  --nav-text-color: #333333;
+  --nav-hover-color: #007aff;
+  --social-icon-color: #333333;
+}
+
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --header-background: #1f1f1f;
+  --nav-background: #1f1f1f;
+  --nav-text-color: #cccccc;
+  --nav-hover-color: #007aff;
+  --social-icon-color: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--header-background);
+}
+
+.side-nav {
+  background-color: var(--nav-background);
+}
+
+.side-nav ul li a {
+  color: var(--nav-text-color);
+}
+
+.side-nav ul li a:hover {
+  color: var(--nav-hover-color);
+}
+
+.social-icons a {
+  color: var(--social-icon-color);
+}
+
+#dp:hover {
+  box-shadow: 0 0 0 10px lightgreen;
+}
+#socialicon
+{
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  padding:5px;
+}
+#socialicong
+{
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  filter: invert(100);
+}
+.dark-mode-toggle {
+  border-radius: 100px;
+  display: flex;
+  justify-content: center; /* Center the icon within the button */
+  align-items: center; /* Center the icon vertically */
+  position: fixed;
+  top: 20px; /* Adjust the top position as needed */
+  right: 20px; /* Adjust the right position as needed */
+  color: #007aff;
+  background-color: white; /* Optional: Add background color */
+  padding: 10px; /* Optional: Add padding for better appearance */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better appearance */
+  cursor: pointer; /* Change cursor to pointer */
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+.menu-toggle{
+  color: #e02f2f;
+}
+#scrollBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: purple;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 100%;
+  font-size: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#scrollBtn:hover {
+  background-color: #555; /* Darker background on hover */
+}
+
